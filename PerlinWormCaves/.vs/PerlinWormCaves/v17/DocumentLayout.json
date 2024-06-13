@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|c:\\users\\pjcor\\documents\\github\\perlinwormcaves\\perlinwormcaves\\assets\\perlinwormcaves2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|solutionrelative:assets\\perlinwormcaves2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|c:\\users\\pjcor\\documents\\github\\perlinwormcaves\\perlinwormcaves\\assets\\perlinnoise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|solutionrelative:assets\\perlinnoise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\assets\\perlinwormcavesgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|solutionrelative:assets\\perlinwormcavesgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PerlinWormCaves2D.cs",
+              "DocumentMoniker": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\PerlinWormCaves2D.cs",
+              "RelativeDocumentMoniker": "Assets\\PerlinWormCaves2D.cs",
+              "ToolTip": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\PerlinWormCaves2D.cs",
+              "RelativeToolTip": "Assets\\PerlinWormCaves2D.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAADwAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T09:42:51.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "perlinNoise.cs",
+              "DocumentMoniker": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\perlinNoise.cs",
+              "RelativeDocumentMoniker": "Assets\\perlinNoise.cs",
+              "ToolTip": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\perlinNoise.cs",
+              "RelativeToolTip": "Assets\\perlinNoise.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T12:17:44.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PerlinWormCavesGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\PerlinWormCavesGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\PerlinWormCavesGenerator.cs",
+              "ToolTip": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\PerlinWormCavesGenerator.cs",
+              "RelativeToolTip": "Assets\\PerlinWormCavesGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T09:38:30.312Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
