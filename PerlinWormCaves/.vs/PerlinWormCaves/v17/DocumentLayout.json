@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\assets\\perlinwormcavesgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|c:\\users\\pjcor\\documents\\github\\perlinwormcaves\\perlinwormcaves\\assets\\perlinwormcavesgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|solutionrelative:assets\\perlinwormcavesgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|c:\\users\\pjcor\\documents\\github\\perlinwormcaves\\perlinwormcaves\\assets\\perlinwormcaves2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\assets\\perlinwormcaves2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{014AD463-587E-85BE-8C94-EFAE630460E2}|Assembly-CSharp.csproj|solutionrelative:assets\\perlinwormcaves2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Assets\\PerlinWormCaves2D.cs",
               "ToolTip": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\PerlinWormCaves2D.cs",
               "RelativeToolTip": "Assets\\PerlinWormCaves2D.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAdAAAA",
+              "ViewState": "AQIAANMAAAAAAAAAAAAIwPUAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-13T09:42:51.298Z",
               "EditorCaption": ""
@@ -45,9 +45,10 @@
               "RelativeDocumentMoniker": "Assets\\perlinNoise.cs",
               "ToolTip": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\perlinNoise.cs",
               "RelativeToolTip": "Assets\\perlinNoise.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAANAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAwFAAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T12:17:44.3Z"
+              "WhenOpened": "2024-06-13T12:17:44.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,7 +58,7 @@
               "RelativeDocumentMoniker": "Assets\\PerlinWormCavesGenerator.cs",
               "ToolTip": "C:\\Users\\pjcor\\Documents\\GitHub\\PerlinWormCaves\\PerlinWormCaves\\Assets\\PerlinWormCavesGenerator.cs",
               "RelativeToolTip": "Assets\\PerlinWormCavesGenerator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAqwEIAAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-13T09:38:30.312Z",
               "EditorCaption": ""

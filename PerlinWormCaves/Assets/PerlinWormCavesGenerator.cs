@@ -5,19 +5,27 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+public enum Forme
+{
+    Sphere,
+    Cube
+}
+
 public class PerlinWormCavesGenerator : MonoBehaviour
 {
+    public Forme Forme = Forme.Sphere;
     public int gridHeight = 100;
     public int gridWidth = 100;
     public int gridLength = 100;
     public float blocSpacing = 1;
 
-    public float scale = 15f;
+    private float scale = 15f;
     public float frequency = 0.5f;
     public float threshold = 0.33f;
     public float offsetx = 0;
     public float offsety = 0;
     public float offsetz = 0;
+    public float wormConvergance = 0.55f;
 
     float[,,] noiseMap;
     Color[,,] noiseColor;
@@ -49,8 +57,8 @@ public class PerlinWormCavesGenerator : MonoBehaviour
             Vector3Int[] destinations = FindNearestMaxima(3, maximapoint, localMaximas);
             foreach (Vector3Int destination in destinations)
             {
-                PerlinWorm worm = new PerlinWorm(new NoiseSettings(), maximapoint, destination);
-                List<Vector3> trail = worm.MoveLength3D(30);
+                PerlinWorm worm = new PerlinWorm(new NoiseSettings(), maximapoint, destination, wormConvergance);
+                List<Vector3> trail = worm.MoveLength3D(40);
                 foreach(Vector3 step in trail)
                 {
                     try
@@ -69,27 +77,21 @@ public class PerlinWormCavesGenerator : MonoBehaviour
                     }
                     
                 }
-                /*PerlinWorm plop = new PerlinWorm(new NoiseSettings(), maximapoint, destination);
-                List<Vector2> pop = plop.MoveLength(50);
-                foreach (Vector2 po in pop)
-                {
-                    texture.SetPixel((int)po.x, (int)po.y, Color.white);
-                    texture.SetPixel((int)po.x, (int)po.y + 1, Color.white);
-                    texture.SetPixel((int)po.x + 1, (int)po.y, Color.white);
-                    //texture.SetPixel((int)po.x - 1, (int)po.y, Color.white);
-                    //texture.SetPixel((int)po.x, (int)po.y - 1, Color.white);
-                }*/
             }
         }
-
         //instantiation des cubes / mesh
+        float Rsquare = gridWidth / 2;
+        Vector3 center = new Vector3 (Rsquare, Rsquare, Rsquare);
+        Rsquare *= Rsquare;
+        float circEquat;//toutes les variables au dessus permettent de déterminer si le cube généré est compris dans une sphère;
         for (int x = 0; x < gridHeight; ++x)
         {
             for (int y = 0; y < gridWidth; ++y)
             {
                 for (int z = 0; z < gridLength; ++z)
                 {
-                    if (noiseColor[x,y,z] == Color.black)
+                    circEquat = MathF.Pow(x - center.x, 2f)+ MathF.Pow(y - center.y, 2f) + MathF.Pow(z - center.z, 2f);
+                    if (noiseColor[x,y,z] == Color.black && (Forme == Forme.Cube || circEquat <= Rsquare))
                     {
                         GameObject spawned = Instantiate(blocTemplate);
                         spawned.transform.position = new Vector3(x*blocSpacing, y * blocSpacing, z * blocSpacing);

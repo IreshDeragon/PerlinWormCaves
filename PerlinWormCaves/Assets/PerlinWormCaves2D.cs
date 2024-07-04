@@ -237,13 +237,14 @@ public class PerlinWorm
         this.currentPosition = startPosition;
         this.moveToConvergancepoint = false;
     }
-    public PerlinWorm(NoiseSettings noiseSettings, Vector3 startPosition, Vector3 convergancePoint)
+    public PerlinWorm(NoiseSettings noiseSettings, Vector3 startPosition, Vector3 convergancePoint, float converganceStrength)
     {
         current3DDirection = Random.insideUnitSphere.normalized;
         this.noiseSettings = noiseSettings;
         this.current3DPosition = startPosition;
         this.convergancePoint3D = convergancePoint;
         is3D = true;
+        this.weight = converganceStrength;
     }
 
     private Vector2 MoveTowardsConvergancePoint()

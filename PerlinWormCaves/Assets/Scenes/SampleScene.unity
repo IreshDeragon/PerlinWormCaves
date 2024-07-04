@@ -372,12 +372,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b68bd6ec0f133040a90eb856e2a4c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridHeight: 40
-  gridWidth: 40
-  gridLength: 40
+  Forme: 0
+  gridHeight: 60
+  gridWidth: 60
+  gridLength: 60
   blocSpacing: 1
-  scale: 5
-  frequency: 0.06
+  scale: 1
+  frequency: 0.08
   threshold: 0.33
   offsetx: 0
   offsety: 0
