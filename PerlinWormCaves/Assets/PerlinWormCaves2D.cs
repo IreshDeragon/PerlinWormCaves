@@ -217,6 +217,11 @@ public class PerlinWorm
     [Range(0.5f, 0.9f)]
     public float weight = 0.6f;
 
+    private Vector3 current3DDirection;
+    private Vector3 current3DPosition;
+    private Vector3 convergancePoint3D;
+    public bool is3D = false;
+
     public PerlinWorm(NoiseSettings noiseSettings, Vector2 startPosition, Vector2 convergancePoint)
     {
         currentDirection = Random.insideUnitCircle.normalized;
@@ -225,7 +230,6 @@ public class PerlinWorm
         this.convergancePoint = convergancePoint;
         this.moveToConvergancepoint = true;
     }
-
     public PerlinWorm(NoiseSettings noiseSettings, Vector2 startPosition)
     {
         currentDirection = Random.insideUnitCircle.normalized;
@@ -233,14 +237,30 @@ public class PerlinWorm
         this.currentPosition = startPosition;
         this.moveToConvergancepoint = false;
     }
+    public PerlinWorm(NoiseSettings noiseSettings, Vector3 startPosition, Vector3 convergancePoint)
+    {
+        current3DDirection = Random.insideUnitSphere.normalized;
+        this.noiseSettings = noiseSettings;
+        this.current3DPosition = startPosition;
+        this.convergancePoint3D = convergancePoint;
+        is3D = true;
+    }
 
-    public Vector2 MoveTowardsConvergancePoint()
+    private Vector2 MoveTowardsConvergancePoint()
     {
         Vector3 direction = GetPerlinNoiseDirection();
         var directionToConvergancePoint = (this.convergancePoint - currentPosition).normalized;
         var endDirection = ((Vector2)direction * (1 - weight) + directionToConvergancePoint * weight).normalized;
         currentPosition += endDirection;
         return currentPosition;
+    }
+    private Vector3 MoveTowards3DConvergancePoint()
+    {
+        Vector3 direction = GetPerlinNoise3DDirection();
+        var directionToConvergancePoint = (this.convergancePoint3D - current3DPosition).normalized;
+        var endDirection = (direction * (1 - weight) + directionToConvergancePoint * weight).normalized;
+        current3DPosition += endDirection;
+        return current3DPosition;
     }
 
     public Vector2 Move()
@@ -256,6 +276,13 @@ public class PerlinWorm
         float degrees = RangeMap(noise, 0, 1, -90, 90);
         currentDirection = (Quaternion.AngleAxis(degrees, Vector3.forward) * currentDirection).normalized;
         return currentDirection;
+    }
+    private Vector3 GetPerlinNoise3DDirection()
+    {
+        float noise = SumNoise(current3DPosition.x, current3DPosition.y, noiseSettings); //0-1
+        float degrees = RangeMap(noise, 0, 1, -90, 90);
+        current3DDirection = (Quaternion.AngleAxis(degrees, Vector3.forward) * current3DDirection).normalized;
+        return current3DDirection;
     }
 
     public List<Vector2> MoveLength(int length)
@@ -294,6 +321,31 @@ public class PerlinWorm
             }
         }
 
+        return list;
+    }
+
+    public List<Vector3> MoveLength3D(int length)
+    {
+        var list = new List<Vector3>();
+        foreach (var item in Enumerable.Range(0, length))
+        {
+            var result = MoveTowards3DConvergancePoint();
+            list.Add(result);
+            if (Vector3.Distance(this.convergancePoint3D, result) < 1)
+            {
+                break;
+            }
+        }
+        while (Vector3.Distance(this.convergancePoint3D, this.current3DPosition) > 1)
+        {
+            weight = 0.9f;
+            var result = MoveTowards3DConvergancePoint();
+            list.Add(result);
+            if (Vector3.Distance(this.convergancePoint3D, result) < 1)
+            {
+                break;
+            }
+        }
         return list;
     }
 
